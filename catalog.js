@@ -98,7 +98,7 @@ window.AQUARIS_CATALOG = [
       { src: 'assets/c01-aod.png?v=2026-09-19-r3', label: 'Always-on', alt: 'C01 always-on display with grey outlined hands and hour markers, a muted red GMT arrow and PM inside a dim square outline', caption: 'Always-on / Native simulator capture. The GMT hand and AM/PM label remain muted red; the square has a dim outline without a lit background.' }
     ],
     videos: [
-      { type: 'video', src: 'assets/c01-video.mp4', poster: 'assets/c01-video-poster.jpg', label: 'Video', alt: 'AQUARIS C01 earlier-version watch-face video without the battery gauge', caption: 'AQUARIS C01 / Earlier version, before the revision 4 battery gauge.' }
+      { type: 'video', src: 'assets/c01-video.mp4?v=2026-09-19-r4', poster: 'assets/c01-video-poster.jpg?v=2026-09-19-r4', label: 'Video', alt: 'AQUARIS C01 revision 4 on a physical watch with the lower battery band and thicker endpoint ticks', caption: 'AQUARIS C01 / Revision 4 on the watch, including the live battery band.' }
     ],
     highlights: ['GMT with AM/PM window', 'Separate day/date wheels', 'Live battery band', 'Outlined always-on'],
     keyFunctions: [
@@ -118,7 +118,7 @@ window.AQUARIS_CATALOG = [
     notes: [
       'Prototype download for evaluation, not a hardware-validated daily-use release. Install and use at your own risk.',
       'UTC offsets are fixed. Adjust the GMT setting manually for daylight saving time.',
-      'Revision 4 adds the live battery band and thicker endpoint ticks. It retains revision 3\'s 12-hour GMT hand and AM/PM window. The gallery video shows an earlier version without the gauge.',
+      'Revision 4 adds the live battery band and thicker endpoint ticks. It retains revision 3\'s 12-hour GMT hand and AM/PM window. The gallery video shows this version on a physical watch.',
       'Current validation covers nine native tests, including battery sweep and low-charge color boundaries, live system battery access during active rendering, GMT noon/midnight and offset rollover, all 217 weekday/date combinations, plus 96 AOD time/offset cases with the AM/PM window included in the pixel bound. These results do not establish physical-device compatibility, long-term battery life or burn-in safety.',
       'The dial is designed for 454 x 454 pixels. No other device-specific downloads or compatibility claims are provided.',
       'The diver-style artwork does not certify water resistance or replace the watch manufacturer\'s usage limits.'
