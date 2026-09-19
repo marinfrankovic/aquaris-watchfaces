@@ -73,44 +73,46 @@ window.AQUARIS_CATALOG = [
     series: 'C01',
     category: 'Analog / GMT',
     tagline: 'Blue waves. Local time and GMT.',
-    description: 'A blue wave-pattern dial, cream hour markers and metal-edged hands frame a red GMT arrow. The weekday and date sit on separate recessed wheel surfaces inside a silver rim. Raised AQUARIS lettering and a double-wave emblem complete the dial.',
+    description: 'A blue wave-pattern dial, cream hour markers and metal-edged hands frame a red GMT arrow. A recessed AM/PM square sits opposite the separate weekday and date wheels, with matching silver rims. Raised AQUARIS lettering and a double-wave emblem complete the dial.',
     device: 'fenix 8 AMOLED 47 mm',
     compatibleWatches: [
       { name: 'fenix 8 AMOLED 47 mm', status: 'Prototype build target / 454 x 454' }
     ],
     compatibilityNote: 'This prototype PRG targets fenix 8 AMOLED 47 mm only. The current build passed eight native simulator tests. Other models and sizes have not been assessed for C01. Physical-device behavior, battery consumption and AMOLED burn-in protection remain unverified.',
     resolution: '454 x 454',
-    timeFormat: 'Local analog + 24-hour GMT hand',
+    timeFormat: 'Local analog + 12-hour GMT hand with AM/PM',
     status: 'Prototype',
     download: {
-      url: 'downloads/c01/2026-09-19-r2/fenix847mm/AquarisC01.prg',
+      url: 'downloads/c01/2026-09-19-r3/fenix847mm/AquarisC01.prg',
       filename: 'AquarisC01.prg',
       device: 'fenix 8 AMOLED 47 mm',
-      build: '2026-09-19 / revision 2',
-      bytes: 244828,
-      sha256: 'f7e3886183e80b753af42665be095360a3d090c9caed0ba657d9cb51438219b1'
+      build: '2026-09-19 / revision 3',
+      bytes: 247100,
+      sha256: '245dd97417efad7324372c20a5d7762f87ee37a31da8e720147aa84dae081a9d'
     },
     images: [
-      { src: 'assets/c01-active.png?v=2026-09-19-r2', label: 'Active', alt: 'AQUARIS C01 blue wave dial with cream analog hands, a red GMT arrow, red SAT lettering and a black date number', caption: 'Active / Native simulator capture. SAT and SUN are red; the date number stays black.' },
-      { src: 'assets/c01-aod.png', label: 'Always-on', alt: 'C01 always-on display with grey outlined hands and hour markers, a muted red GMT arrow and matching markers at 3 and 9', caption: 'Always-on / Native simulator capture. Shared hand silhouettes, dim hour markers and a distinct red GMT outline.' }
+      { src: 'assets/c01-active.png?v=2026-09-19-r3', label: 'Active', alt: 'AQUARIS C01 blue wave dial with a red GMT arrow and recessed PM square opposite the red SAT lettering and black date number', caption: 'Active / Native simulator capture. The GMT hand reads against the normal hour markers; the silver-framed AM/PM square identifies its half of the day.' },
+      { src: 'assets/c01-aod.png?v=2026-09-19-r3', label: 'Always-on', alt: 'C01 always-on display with grey outlined hands and hour markers, a muted red GMT arrow and PM inside a dim square outline', caption: 'Always-on / Native simulator capture. The GMT hand and AM/PM label remain muted red; the square has a dim outline without a lit background.' }
     ],
-    highlights: ['Local time and GMT', 'Separate day/date wheels', 'Blue wave dial', 'Outlined always-on'],
+    highlights: ['GMT with AM/PM window', 'Separate day/date wheels', 'Blue wave dial', 'Outlined always-on'],
     keyFunctions: [
-      ['Local time and GMT', 'Local hour, minute and seconds hands keep the watch time. A red arrow tracks a selected fixed UTC offset on a 24-hour rotation, with midnight at the top and noon at the bottom.'],
+      ['Local time and GMT', 'Local hour, minute and seconds hands keep the watch time. The red GMT arrow tracks a selected fixed UTC offset on a 12-hour rotation using the normal hour markers. A small AM/PM square between 9 o\'clock and the center distinguishes morning from afternoon and evening in that GMT zone.'],
       ['Separate calendar wheels', 'The English weekday and two-digit date follow the watch\'s local calendar. SAT and SUN appear in red; Monday through Friday and the date number stay black. A stepped divider and different surface shading give the weekday a deeper recess than the date, inside the same silver frame.']
     ],
     features: [
       ['Blue wave dial', 'Layered wave artwork, cream markers and warm metallic hand edges form the active face. A subtle fin motif sits near 8 o\'clock. Raised lettering, a wave emblem and the C01 GMT caption add shallow relief.'],
       ['Four analog hands', 'A tapered hour hand and broad arrow minute hand show local time. The seconds hand has a forked counterweight; the longer red GMT hand has a cream-filled triangular tip.'],
+      ['Recessed AM/PM window', 'Muted red Bahnschrift lettering sits on a white surface inside a silver bevel, matching the calendar window across the dial. The indicator follows the selected GMT offset, not local time. Both noon and midnight point to 12; PM identifies noon and AM identifies midnight. Hands pass over the window.'],
       ['GMT settings on the watch', 'Open Settings > GMT time zone and choose UTC-12:00 through UTC+14:00 in 15-minute increments. The setting is saved. UTC is the default; local hands and the calendar remain on watch time.'],
-      ['Outlined always-on view', 'Low-power mode keeps the standard hour and minute silhouettes as dim grey outlines, plus a muted red GMT hand. Circular and shaped markers remain, with a mirrored 9 o\'clock marker replacing the hidden calendar at 3. Positions update at minute resolution.'],
+      ['Outlined always-on view', 'Low-power mode keeps the standard hour and minute silhouettes as dim grey outlines, plus a muted red GMT hand and AM/PM label in an unfilled square. Circular and shaped markers remain, with a mirrored 9 o\'clock marker replacing the hidden calendar at 3. Positions update at minute resolution.'],
       ['Reduced low-power detail', 'Always-on mode hides the blue dial, branding, calendar, seconds and minute ticks. Hand interiors stay black and omit the active face\'s bevels and shadows. Hardware battery and burn-in validation is still pending.'],
       ['No sensor or network permissions', 'C01 uses the watch clock and local calendar. It does not request heart-rate, weather, location or network access.']
     ],
     notes: [
       'Prototype download for evaluation, not a hardware-validated daily-use release. Install and use at your own risk.',
       'UTC offsets are fixed. Adjust the GMT setting manually for daylight saving time.',
-      'Current validation covers eight native tests, including weekend lettering and unchanged date colors across all 217 weekday/date combinations, plus 96 AOD time/offset cases. These results do not establish physical-device compatibility, long-term battery life or burn-in safety.',
+      'Revision 3 changes GMT from a 24-hour rotation to a 12-hour hand with an AM/PM window. The original minute track is retained; no separate 24-hour scale is needed.',
+      'Current validation covers eight native tests, including GMT noon/midnight and offset rollover, weekend lettering and unchanged date colors across all 217 weekday/date combinations, plus 96 AOD time/offset cases with the AM/PM window included in the pixel bound. These results do not establish physical-device compatibility, long-term battery life or burn-in safety.',
       'The dial is designed for 454 x 454 pixels. No other device-specific downloads or compatibility claims are provided.',
       'The diver-style artwork does not certify water resistance or replace the watch manufacturer\'s usage limits.'
     ]
