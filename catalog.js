@@ -94,6 +94,9 @@ window.AQUARIS_CATALOG = [
       { src: 'assets/c01-active.png?v=2026-09-19-r3', label: 'Active', alt: 'AQUARIS C01 blue wave dial with a red GMT arrow and recessed PM square opposite the red SAT lettering and black date number', caption: 'Active / Native simulator capture. The GMT hand reads against the normal hour markers; the silver-framed AM/PM square identifies its half of the day.' },
       { src: 'assets/c01-aod.png?v=2026-09-19-r3', label: 'Always-on', alt: 'C01 always-on display with grey outlined hands and hour markers, a muted red GMT arrow and PM inside a dim square outline', caption: 'Always-on / Native simulator capture. The GMT hand and AM/PM label remain muted red; the square has a dim outline without a lit background.' }
     ],
+    videos: [
+      { type: 'video', src: 'assets/c01-video.mp4', poster: 'assets/c01-video-poster.jpg', label: 'Video', alt: 'AQUARIS C01 watch-face video', caption: 'AQUARIS C01 / Watch-face video.' }
+    ],
     highlights: ['GMT with AM/PM window', 'Separate day/date wheels', 'Blue wave dial', 'Outlined always-on'],
     keyFunctions: [
       ['Local time and GMT', 'Local hour, minute and seconds hands keep the watch time. The red GMT arrow tracks a selected fixed UTC offset on a 12-hour rotation using the normal hour markers. A small AM/PM square between 9 o\'clock and the center distinguishes morning from afternoon and evening in that GMT zone.'],
