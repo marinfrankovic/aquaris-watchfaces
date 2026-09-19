@@ -78,26 +78,26 @@ window.AQUARIS_CATALOG = [
     compatibleWatches: [
       { name: 'fenix 8 AMOLED 47 mm', status: 'Prototype build target / 454 x 454' }
     ],
-    compatibilityNote: 'This prototype PRG targets fenix 8 AMOLED 47 mm only. The existing build passed seven native simulator tests. Other models and sizes have not been assessed for C01. Physical-device behavior, battery consumption and AMOLED burn-in protection remain unverified.',
+    compatibilityNote: 'This prototype PRG targets fenix 8 AMOLED 47 mm only. The current build passed eight native simulator tests. Other models and sizes have not been assessed for C01. Physical-device behavior, battery consumption and AMOLED burn-in protection remain unverified.',
     resolution: '454 x 454',
     timeFormat: 'Local analog + 24-hour GMT hand',
     status: 'Prototype',
     download: {
-      url: 'downloads/c01/2026-09-19/fenix847mm/AquarisC01.prg',
+      url: 'downloads/c01/2026-09-19-r2/fenix847mm/AquarisC01.prg',
       filename: 'AquarisC01.prg',
       device: 'fenix 8 AMOLED 47 mm',
-      build: '2026-09-19',
-      bytes: 244748,
-      sha256: 'a060a5bb4d72d99ac0fc95a2ad9dc8b442b23c6c9be28bed979ea5ebc259d8bd'
+      build: '2026-09-19 / revision 2',
+      bytes: 244828,
+      sha256: 'f7e3886183e80b753af42665be095360a3d090c9caed0ba657d9cb51438219b1'
     },
     images: [
-      { src: 'assets/c01-active.png', label: 'Active', alt: 'AQUARIS C01 blue wave dial with cream analog hands, a red GMT arrow and separate weekday and date wheels', caption: 'Active / Native simulator capture with separate recessed weekday and date surfaces.' },
+      { src: 'assets/c01-active.png?v=2026-09-19-r2', label: 'Active', alt: 'AQUARIS C01 blue wave dial with cream analog hands, a red GMT arrow, red SAT lettering and a black date number', caption: 'Active / Native simulator capture. SAT and SUN are red; the date number stays black.' },
       { src: 'assets/c01-aod.png', label: 'Always-on', alt: 'C01 always-on display with grey outlined hands and hour markers, a muted red GMT arrow and matching markers at 3 and 9', caption: 'Always-on / Native simulator capture. Shared hand silhouettes, dim hour markers and a distinct red GMT outline.' }
     ],
     highlights: ['Local time and GMT', 'Separate day/date wheels', 'Blue wave dial', 'Outlined always-on'],
     keyFunctions: [
       ['Local time and GMT', 'Local hour, minute and seconds hands keep the watch time. A red arrow tracks a selected fixed UTC offset on a 24-hour rotation, with midnight at the top and noon at the bottom.'],
-      ['Separate calendar wheels', 'The English weekday and two-digit date follow the watch\'s local calendar. A stepped divider and different surface shading give the weekday a deeper recess than the date, inside the same silver frame.']
+      ['Separate calendar wheels', 'The English weekday and two-digit date follow the watch\'s local calendar. SAT and SUN appear in red; Monday through Friday and the date number stay black. A stepped divider and different surface shading give the weekday a deeper recess than the date, inside the same silver frame.']
     ],
     features: [
       ['Blue wave dial', 'Layered wave artwork, cream markers and warm metallic hand edges form the active face. A subtle fin motif sits near 8 o\'clock. Raised lettering, a wave emblem and the C01 GMT caption add shallow relief.'],
@@ -110,7 +110,7 @@ window.AQUARIS_CATALOG = [
     notes: [
       'Prototype download for evaluation, not a hardware-validated daily-use release. Install and use at your own risk.',
       'UTC offsets are fixed. Adjust the GMT setting manually for daylight saving time.',
-      'Existing validation covers seven native tests, all 217 weekday/date combinations and 96 AOD time/offset cases. These results do not establish physical-device compatibility, long-term battery life or burn-in safety.',
+      'Current validation covers eight native tests, including weekend lettering and unchanged date colors across all 217 weekday/date combinations, plus 96 AOD time/offset cases. These results do not establish physical-device compatibility, long-term battery life or burn-in safety.',
       'The dial is designed for 454 x 454 pixels. No other device-specific downloads or compatibility claims are provided.',
       'The diver-style artwork does not certify water resistance or replace the watch manufacturer\'s usage limits.'
     ]
