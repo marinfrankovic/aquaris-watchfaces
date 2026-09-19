@@ -1,0 +1,9 @@
+/node_modules/
+/verification/
+*.log
+*.prg
+*.iq
+*.der
+*.pem
+.env
+.env.*

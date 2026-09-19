@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AQUARIS watch faces by Marin Frankovic. Explore the R01 analog-digital series, its features, and installation guidance.">
+  <meta name="theme-color" content="#091426">
+  <title>AQUARIS | Watch-face collection</title>
+  <link rel="icon" href="assets/aquaris.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="catalog.js"></script>
+  <script defer src="site.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="AQUARIS collection"><img src="assets/aquaris.svg" width="48" height="32" alt=""><span>AQUARIS</span></a>
+    <nav aria-label="Main navigation"><a href="index.html" data-nav="collection">Collection</a><a href="#installation">Installation</a><a href="#disclaimer">Disclaimer</a></nav>
+  </header>
+  <main id="main" tabindex="-1">
+    <section id="collection" class="collection section-shell" aria-labelledby="collection-title">
+      <div class="section-heading"><div><p class="eyebrow">Independent watch-face design / By Marin Frankovic</p><h1 id="collection-title">AQUARIS</h1><p class="intro">Watch faces with a character of their own.</p></div><p class="collection-count" id="collection-count"></p></div>
+      <div id="catalog" class="catalog"></div>
+      <noscript><p>Enable JavaScript to view the watch-face catalog. AQUARIS R01 is an analog-digital design for the Garmin fenix 8 AMOLED 47 mm, featuring local analog time, an optional second digital time zone, battery and heart-rate readouts, a selectable metric, and a sparse always-on display.</p><img src="assets/r01-active.png" width="454" height="454" alt="AQUARIS R01 active watch face"></noscript>
+    </section>
+    <section id="watch-detail" class="section-shell detail" hidden aria-labelledby="detail-title"></section>
+    <section id="installation" class="guide section-shell" aria-labelledby="installation-title">
+      <div class="section-heading"><div><p class="eyebrow">On your wrist</p><h2 id="installation-title">Installation</h2></div><span class="section-number">01 / Guide</span></div>
+      <p class="section-lead">For a compatible watch and a watch-face file supplied separately. This catalog does not distribute watch-face files.</p>
+      <ol class="steps">
+        <li><h3>Check compatibility</h3><p>Use a build made for your exact watch model. R01 currently targets the fenix 8 AMOLED 47 mm with a 454 x 454 display. Keep your watch firmware up to date.</p></li>
+        <li><h3>Connect by USB</h3><p>Connect the watch to a Windows PC with a data-capable cable. Select file-transfer or MTP mode if prompted. Open the watch's internal storage in File Explorer.</p></li>
+        <li><h3>Transfer the file</h3><p>Copy the supplied <code>.prg</code> file into <code>GARMIN/APPS</code>. For R01, the filename is <code>AquarisR01.prg</code>. Do not copy test builds, source code, or debug files. Wait for the transfer to finish, then disconnect safely.</p></li>
+        <li><h3>Select the watch face</h3><p>Open the watch-face selection menu on the watch, select Aquaris R01, and apply it. Menu names vary by firmware. Use its Settings/Customize menu to choose the digital time zone, seconds, and right-side metric.</p></li>
+      </ol>
+      <div class="guide-notes"><div><h3>Updating an existing face</h3><p>Switch to another watch face before replacing the same file. Avoid keeping an older build under a different filename. If you installed the early CasioOldSchool build, remove that old PRG before transferring AquarisR01.</p></div><div><h3>Data and always-on display</h3><p>Sync Garmin weather with your phone, enable wrist heart rate as needed, and enable Always On Display in the watch settings to use the low-power view. Missing readings appear as <code>--</code>. Brightness and gesture timing are controlled by the watch.</p></div></div>
+      <p class="reference">Reference: <a href="https://developer.garmin.com/connect-iq/connect-iq-basics/your-first-app/#side-loading-an-app">Garmin's official sideloading guide</a>. These instructions describe USB sideloading, not a Connect IQ Store installation.</p>
+    </section>
+    <section id="disclaimer" class="disclaimer section-shell" aria-labelledby="disclaimer-title">
+      <div class="section-heading"><div><p class="eyebrow">Please read</p><h2 id="disclaimer-title">Disclaimer</h2></div><span class="section-number">02 / Notes</span></div>
+      <div class="disclaimer-grid"><div><h3>Independent project</h3><p>AQUARIS is an independent personal watch-face project by Marin Frankovic. It is not affiliated with, endorsed by, or sponsored by Garmin or Casio. Product names and trademarks belong to their respective owners. Any resemblance to classic watch styling is a design reference, not a claim of affiliation.</p></div><div><h3>Readings and compatibility</h3><p>Battery estimates, heart rate, weather, elevation, and activity values depend on the watch, sensors, firmware, and connected services. They may be delayed, unavailable, or inaccurate. They are not medical advice or safety-critical navigation data. Compatibility is limited to the model stated on each project page.</p></div><div><h3>Use and availability</h3><p>Projects are provided as-is, without guarantees of accuracy, uninterrupted operation, battery life, or freedom from display burn-in. Install only trusted files and use them at your own risk, subject to applicable law. Screenshots are labeled simulator captures; actual appearance and readings may differ. No download or purchase is offered on this site.</p></div></div>
+    </section>
+  </main>
+  <footer class="site-footer"><a class="brand" href="index.html"><img src="assets/aquaris.svg" width="36" height="24" alt=""><span>AQUARIS</span></a><p>Designed by Marin Frankovic</p><a href="https://github.com/marinfrankovic/aquaris-watchfaces">Website repository</a></footer>
+</body>
+</html>
