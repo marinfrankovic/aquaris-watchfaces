@@ -10,7 +10,28 @@ window.AQUARIS_CATALOG = [
     compatibleWatches: [
       { name: 'fenix 8 AMOLED 47 mm', status: 'Declared build target / 454 x 454' }
     ],
-    compatibilityNote: 'Only the model above is currently supported by this project. Other case sizes, solar-powered models, and other watch families have not been validated. A shared SDK profile or a successful scaled-layout test is not a compatibility claim.',
+    compatibilityNote: 'The downloadable PRG is for fenix 8 AMOLED 47 mm only. The assessment below covers 15 selected device profiles across recent generations, not every model or case size. A simulator pass is a candidate result, not a supported download or confirmation that every function works on a physical watch.',
+    compatibilityAssessment: {
+      date: '2026-09-19',
+      method: 'SDK 9.2.0: device-specific release compilation, 14 existing automated tests, and one runtime check for the required fonts. Nine profiles passed all 15 tests; six were blocked. Layout assertions currently cover 416 and 454 pixels, so passing on other sizes does not validate their full layout. Sensor availability, settings interaction, low-power behavior and battery use need device-specific validation. No additional model-specific downloads are offered.',
+      results: [
+        ['fenix 9 47 mm', '454 x 454', 'Simulator pass', '15/15 tests; candidate only.'],
+        ['fenix 8 AMOLED 47 mm', '454 x 454', 'Supported download', '15/15 tests; original build tried on owner\'s watch. Latest typography is simulator-tested.'],
+        ['fenix 7 Pro', '260 x 260', 'Simulator pass', '15/15 tests; MIP layout and low-power behavior still need validation.'],
+        ['epix (Gen 2)', '416 x 416', 'Simulator pass', '15/15 tests; candidate only.'],
+        ['Forerunner 970', '454 x 454', 'Simulator pass', '15/15 tests; candidate only.'],
+        ['Forerunner 965', '454 x 454', 'Simulator pass', '15/15 tests; candidate only.'],
+        ['Forerunner 955', '260 x 260', 'Simulator pass', '15/15 tests; MIP layout and low-power behavior still need validation.'],
+        ['Venu 4 41 mm', '390 x 390', 'Simulator pass', '15/15 tests; smaller-screen layout still needs validation.'],
+        ['Venu 3', '454 x 454', 'Blocked', 'Compiled, but required fonts were unavailable at the requested sizes; 14/15 tests passed.'],
+        ['Venu 2', '416 x 416', 'Blocked', 'Compiled, but the required vector-font API is absent; runtime tests failed.'],
+        ['vivoactive 6', '390 x 390', 'Simulator pass', '15/15 tests; smaller-screen layout still needs validation.'],
+        ['vivoactive 5', '390 x 390', 'Blocked', 'Compiled, but the required vector-font API is absent; runtime tests failed.'],
+        ['vivoactive 4', '260 x 260', 'Blocked', 'Compilation blocked: device API is below the required version 5.0.'],
+        ['Instinct 3 AMOLED 45 mm', '390 x 390', 'Blocked', 'Compiled, but the required vector-font API is absent; runtime tests failed.'],
+        ['Instinct 2', '176 x 176', 'Blocked', 'Compilation blocked: device API is below the required version 5.0.']
+      ]
+    },
     resolution: '454 x 454',
     status: 'Personal project',
     download: {
