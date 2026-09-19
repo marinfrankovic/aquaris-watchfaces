@@ -46,6 +46,9 @@ window.AQUARIS_CATALOG = [
       { src: 'assets/r01-active.png', label: 'Active', alt: 'AQUARIS R01 active face with analog hands, green digital clock, battery gauge and dot-matrix temperature', caption: 'Active face / Native simulator capture. Missing heart-rate data is shown as --.' },
       { src: 'assets/r01-aod.png', label: 'Always-on', alt: 'R01 low-power display with two thin digital clocks on a black background', caption: 'Always-on / Native simulator capture with a second time zone enabled. Matching times show one centered clock.' }
     ],
+    videos: [
+      { type: 'video', src: 'assets/r01-video.mp4', poster: 'assets/r01-video-poster.jpg', label: 'Video', alt: 'AQUARIS R01 watch-face video', caption: 'AQUARIS R01 / Watch-face video.' }
+    ],
     highlights: ['Track two time zones', 'Change the right display', 'Battery and heart rate', 'Digital always-on'],
     keyFunctions: [
       ['Track two time zones', 'Keep local time on the analog hands and a second time zone on the digital clock. Always-on mode can show both digital clocks together. Choose a fixed UTC offset from -12:00 to +14:00 in 15-minute steps; adjust it manually for daylight saving time.'],
