@@ -2,6 +2,7 @@
 /verification/
 *.log
 *.prg
+!/downloads/r01/2026-09-19/fenix847mm/AquarisR01.prg
 *.iq
 *.der
 *.pem
