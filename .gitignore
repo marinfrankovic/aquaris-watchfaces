@@ -11,5 +11,7 @@
 *.iq
 *.der
 *.pem
+*.key
+*developer_key*
 .env
 .env.*
