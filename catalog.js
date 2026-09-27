@@ -123,5 +123,53 @@ window.AQUARIS_CATALOG = [
       'The dial is designed for 454 x 454 pixels. No other device-specific downloads or compatibility claims are provided.',
       'The diver-style artwork does not certify water resistance or replace the watch manufacturer\'s usage limits.'
     ]
+  },
+  {
+    id: 'c02',
+    name: 'AQUARIS C02',
+    series: 'C02',
+    category: 'Analog / Battery gauge',
+    tagline: 'Polished steel. Sunburst silver.',
+    description: 'A silver sunburst dial with applied square steel numerals, tapered batons and a chrome-ringed date window. Broad white-steel hands with lume strips sweep over a recessed battery gauge above 6, where a red needle moves from E to F.',
+    device: 'fenix 8 AMOLED 47 mm',
+    compatibleWatches: [
+      { name: 'fenix 8 AMOLED 47 mm', status: 'Prototype build target / 454 x 454' }
+    ],
+    compatibilityNote: 'This prototype PRG targets fenix 8 AMOLED 47 mm only. The current build passed six native simulator tests. Other models and sizes have not been assessed for C02. Physical-device behavior, drawing performance, battery consumption and AMOLED burn-in protection remain unverified.',
+    resolution: '454 x 454',
+    timeFormat: 'Local analog hours and minutes',
+    status: 'Prototype',
+    download: {
+      url: 'downloads/c02/2026-09-27/fenix847mm/AquarisC02.prg',
+      filename: 'AquarisC02.prg',
+      device: 'fenix 8 AMOLED 47 mm',
+      build: '2026-09-27',
+      bytes: 1268604,
+      sha256: '46d71dfa4aa5a93c51fffeb361aecb5f5772be93850a9ea66221b3ba89bdfa93'
+    },
+    images: [
+      { src: 'assets/c02-active.png?v=2026-09-27', label: 'Active', alt: 'AQUARIS C02 silver sunburst dial with square steel 12, 9 and 6 numerals, white steel hands, a chrome-ringed date window at 3 and a red battery gauge needle above 6', caption: 'Active / Native simulator capture. The red gauge needle shows the simulator\'s battery level between E and F.' },
+      { src: 'assets/c02-aod.png?v=2026-09-27', label: 'Always-on', alt: 'C02 always-on display with outlined numerals, batons and date frame, grey date, dim red minute dots and outlined hands with green lume', caption: 'Always-on / Native simulator capture. Outlines and dim lume on black; no logo, gauge or dial.' }
+    ],
+    highlights: ['Battery gauge E to F', 'Applied square numerals', 'Chrome date window', 'Outlined always-on'],
+    keyFunctions: [
+      ['Battery gauge', 'A red needle in the recessed sub-dial above 6 reads the watch\'s battery percentage. It points at E when empty and sweeps through the bottom to F when full, across 21 ticks at 5% steps. The gauge is hidden in always-on mode.'],
+      ['Date window', 'The day of the month appears in a square window inside a faceted chrome ring at 3 o\'clock, following the watch\'s local calendar.']
+    ],
+    features: [
+      ['Sunburst silver dial', 'Two broad bright sectors form an X-shaped sunburst from the upper-left light, over layered radial brushing. A raised white chapter ring carries a quarter-minute track, square 05 to 60 minute numerals and red 5-minute marks.'],
+      ['Applied steel markers', 'Square polished-steel 12, 9 and 6 numerals have a black line along each stroke and cast shadows. Tapered steel batons with black centre grooves mark the other hours; the 5 and 7 batons beside the gauge are shorter. The 6 sits in a notch cut into the gauge.'],
+      ['Steel hands with lume', 'The broad hour hand stops just below the 12. The minute hand has a black base and counterweight whose side prongs flank the start of its white blade, and it reaches the outer ends of the batons. Both hands carry outlined lume strips and cast their own shadows, with the light fixed at the upper left.'],
+      ['Recessed battery gauge', 'A snailed white sub-dial with a beveled edge holds a glossy black arc that follows the outer rim and tapers to points at both ends. Raised E and F letters sit beside the end ticks. The red needle has a black counterweight and a large red hub.'],
+      ['AQUARIS branding', 'The raised double-wave logo sits under 12, with AQUARIS in black and C02 in red on one line below it.'],
+      ['Outlined always-on view', 'Low-power mode shows outlined numerals with dim centre lines, batons, the date frame and grey date digits, dim red 5-minute dots and outlined hands with dim green lume. Positions update at minute resolution, and the view does not read battery stats.'],
+      ['No sensor or network permissions', 'C02 uses the watch clock, local calendar and system battery percentage. It has no settings and does not request heart-rate, weather, location or network access.']
+    ],
+    notes: [
+      'Prototype download for evaluation, not a hardware-validated daily-use release. Install and use at your own risk.',
+      'C02 has no seconds hand. The sub-dial above 6 shows battery level instead.',
+      'Current validation covers six native tests: hand angles, battery-gauge angles and clamping, rotation about each hand pivot, date-cell selection, resource geometry and the active/always-on draw layers. In the simulator, the always-on view lit about 7.7% of the display. These results do not establish physical-device compatibility, battery life or burn-in safety.',
+      'The dial is designed for 454 x 454 pixels. No other device-specific downloads or compatibility claims are provided.'
+    ]
   }
 ];
