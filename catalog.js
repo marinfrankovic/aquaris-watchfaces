@@ -5,6 +5,7 @@ window.AQUARIS_CATALOG = [
     series: 'R01',
     category: 'Analog / Digital',
     tagline: 'Classic instruments. Digital precision.',
+    designHeading: ['Needles above,', 'green LCD below.'],
     description: 'A textured dial, red hour track, orange and white hands, and a recessed green LCD. R01 brings an analog-digital watch layout to an AMOLED display, with the readings you use every day.',
     device: 'fenix 8 AMOLED 47 mm',
     compatibleWatches: [
@@ -76,12 +77,34 @@ window.AQUARIS_CATALOG = [
     series: 'C01',
     category: 'Analog / GMT',
     tagline: 'Blue waves. Local time and GMT.',
+    designHeading: ['Deep blue water,', 'two time zones.'],
     description: 'A blue wave-pattern dial, cream hour markers and metal-edged hands frame a red GMT arrow. A recessed AM/PM square sits opposite the separate weekday and date wheels, with matching silver rims. A translucent-looking battery band follows the lower minute ticks between 7 and 5 o\'clock.',
     device: 'fenix 8 AMOLED 47 mm',
     compatibleWatches: [
       { name: 'fenix 8 AMOLED 47 mm', status: 'Prototype build target / 454 x 454' }
     ],
-    compatibilityNote: 'This prototype PRG targets fenix 8 AMOLED 47 mm only. The current build passed nine native simulator tests. Other models and sizes have not been assessed for C01. Physical-device behavior, battery consumption and AMOLED burn-in protection remain unverified.',
+    compatibilityNote: 'This prototype PRG targets fenix 8 AMOLED 47 mm only. The assessment below covers the same 15 selected device profiles as R01, not every model or case size. C01 draws its dial at fixed 454 x 454 coordinates, so only 454-pixel screens are candidates. A simulator pass is a candidate result, not a supported download or confirmation that every function works on a physical watch. Battery consumption and AMOLED burn-in protection remain unverified.',
+    compatibilityAssessment: {
+      date: '2026-09-27',
+      method: 'SDK 9.2.0: device-specific release compilation and C01\'s 9 native automated tests in the simulator. Thirteen profiles compiled and passed all 9 tests; two were blocked by API level. The dial is drawn at fixed 454 x 454 coordinates with no scaled layout, so profiles with other screen sizes are listed as blocked even where the build compiled and the tests passed. The tests check time, GMT, calendar, battery-band and always-on logic, not the full rendered image, low-power behavior or battery use. No additional model-specific downloads are offered.',
+      results: [
+        ['fenix 9 47 mm', '454 x 454', 'Simulator pass', '9/9 tests; candidate only.'],
+        ['fenix 8 AMOLED 47 mm', '454 x 454', 'Supported download', '9/9 tests; revision 4 appears on the owner\'s watch in the gallery video.'],
+        ['fenix 7 Pro', '260 x 260', 'Blocked', 'Compiled and 9/9 tests passed, but the fixed 454-pixel layout does not fit this 260-pixel MIP screen.'],
+        ['epix (Gen 2)', '416 x 416', 'Blocked', 'Compiled and 9/9 tests passed, but the fixed 454-pixel layout does not fit this 416-pixel screen.'],
+        ['Forerunner 970', '454 x 454', 'Simulator pass', '9/9 tests; candidate only.'],
+        ['Forerunner 965', '454 x 454', 'Simulator pass', '9/9 tests; candidate only.'],
+        ['Forerunner 955', '260 x 260', 'Blocked', 'Compiled and 9/9 tests passed, but the fixed 454-pixel layout does not fit this 260-pixel MIP screen.'],
+        ['Venu 4 41 mm', '390 x 390', 'Blocked', 'Compiled and 9/9 tests passed, but the fixed 454-pixel layout does not fit this 390-pixel screen.'],
+        ['Venu 3', '454 x 454', 'Simulator pass', '9/9 tests; candidate only.'],
+        ['Venu 2', '416 x 416', 'Blocked', 'Compiled and 9/9 tests passed, but the fixed 454-pixel layout does not fit this 416-pixel screen.'],
+        ['vivoactive 6', '390 x 390', 'Blocked', 'Compiled and 9/9 tests passed, but the fixed 454-pixel layout does not fit this 390-pixel screen.'],
+        ['vivoactive 5', '390 x 390', 'Blocked', 'Compiled and 9/9 tests passed, but the fixed 454-pixel layout does not fit this 390-pixel screen.'],
+        ['vivoactive 4', '260 x 260', 'Blocked', 'Compilation blocked: device API is below the required version 5.0.'],
+        ['Instinct 3 AMOLED 45 mm', '390 x 390', 'Blocked', 'Compiled and 9/9 tests passed, but the fixed 454-pixel layout does not fit this 390-pixel screen.'],
+        ['Instinct 2', '176 x 176', 'Blocked', 'Compilation blocked: device API is below the required version 5.0.']
+      ]
+    },
     resolution: '454 x 454',
     timeFormat: 'Local analog + 12-hour GMT hand with AM/PM',
     status: 'Prototype',
@@ -130,12 +153,34 @@ window.AQUARIS_CATALOG = [
     series: 'C02',
     category: 'Analog / Battery gauge',
     tagline: 'Polished steel. Sunburst silver.',
+    designHeading: ['Applied steel', 'on sunburst silver.'],
     description: 'A silver sunburst dial with applied square steel numerals, tapered batons and a chrome-ringed date window. Broad white-steel hands with lume strips sweep over a recessed battery gauge above 6, where a red needle moves from E to F.',
     device: 'fenix 8 AMOLED 47 mm',
     compatibleWatches: [
       { name: 'fenix 8 AMOLED 47 mm', status: 'Prototype build target / 454 x 454' }
     ],
-    compatibilityNote: 'This prototype PRG targets fenix 8 AMOLED 47 mm only. The current build passed six native simulator tests. Other models and sizes have not been assessed for C02. Physical-device behavior, drawing performance, battery consumption and AMOLED burn-in protection remain unverified.',
+    compatibilityNote: 'This prototype PRG targets fenix 8 AMOLED 47 mm only. The assessment below covers the same 15 selected device profiles as R01, not every model or case size. C02 is built from 454 x 454 pre-rendered artwork, so only 454-pixel screens are candidates. A simulator pass is a candidate result, not a supported download or confirmation that every function works on a physical watch. Drawing performance, battery consumption and AMOLED burn-in protection remain unverified.',
+    compatibilityAssessment: {
+      date: '2026-09-27',
+      method: 'SDK 9.2.0: device-specific release compilation and C02\'s 6 native automated tests in the simulator. Thirteen profiles compiled and passed all 6 tests; two were blocked by API level. The dial, date sheet and hands are pre-rendered for 454 x 454 pixels and are not scaled, so profiles with other screen sizes are listed as blocked even where the build compiled and the tests passed. The tests check hand and gauge angles, rotation, date selection, resource geometry and draw layers, not the full rendered image, low-power behavior or battery use. No additional model-specific downloads are offered.',
+      results: [
+        ['fenix 9 47 mm', '454 x 454', 'Simulator pass', '6/6 tests; candidate only.'],
+        ['fenix 8 AMOLED 47 mm', '454 x 454', 'Supported download', '6/6 tests; appears on the owner\'s watch in the gallery video.'],
+        ['fenix 7 Pro', '260 x 260', 'Blocked', 'Compiled and 6/6 tests passed, but the 454-pixel artwork does not fit this 260-pixel MIP screen.'],
+        ['epix (Gen 2)', '416 x 416', 'Blocked', 'Compiled and 6/6 tests passed, but the 454-pixel artwork does not fit this 416-pixel screen.'],
+        ['Forerunner 970', '454 x 454', 'Simulator pass', '6/6 tests; candidate only.'],
+        ['Forerunner 965', '454 x 454', 'Simulator pass', '6/6 tests; candidate only.'],
+        ['Forerunner 955', '260 x 260', 'Blocked', 'Compiled and 6/6 tests passed, but the 454-pixel artwork does not fit this 260-pixel MIP screen.'],
+        ['Venu 4 41 mm', '390 x 390', 'Blocked', 'Compiled and 6/6 tests passed, but the 454-pixel artwork does not fit this 390-pixel screen.'],
+        ['Venu 3', '454 x 454', 'Simulator pass', '6/6 tests; candidate only.'],
+        ['Venu 2', '416 x 416', 'Blocked', 'Compiled and 6/6 tests passed, but the 454-pixel artwork does not fit this 416-pixel screen.'],
+        ['vivoactive 6', '390 x 390', 'Blocked', 'Compiled and 6/6 tests passed, but the 454-pixel artwork does not fit this 390-pixel screen.'],
+        ['vivoactive 5', '390 x 390', 'Blocked', 'Compiled and 6/6 tests passed, but the 454-pixel artwork does not fit this 390-pixel screen.'],
+        ['vivoactive 4', '260 x 260', 'Blocked', 'Compilation blocked: device API is below the required version 5.0.'],
+        ['Instinct 3 AMOLED 45 mm', '390 x 390', 'Blocked', 'Compiled and 6/6 tests passed, but the 454-pixel artwork does not fit this 390-pixel screen.'],
+        ['Instinct 2', '176 x 176', 'Blocked', 'Compilation blocked: device API is below the required version 5.0.']
+      ]
+    },
     resolution: '454 x 454',
     timeFormat: 'Local analog hours and minutes',
     status: 'Prototype',
@@ -150,6 +195,9 @@ window.AQUARIS_CATALOG = [
     images: [
       { src: 'assets/c02-active.png?v=2026-09-27', label: 'Active', alt: 'AQUARIS C02 silver sunburst dial with square steel 12, 9 and 6 numerals, white steel hands, a chrome-ringed date window at 3 and a red battery gauge needle above 6', caption: 'Active / Native simulator capture. The red gauge needle shows the simulator\'s battery level between E and F.' },
       { src: 'assets/c02-aod.png?v=2026-09-27', label: 'Always-on', alt: 'C02 always-on display with outlined numerals, batons and date frame, grey date, dim red minute dots and outlined hands with green lume', caption: 'Always-on / Native simulator capture. Outlines and dim lume on black; no logo, gauge or dial.' }
+    ],
+    videos: [
+      { type: 'video', src: 'assets/c02-video.mp4?v=2026-09-27', poster: 'assets/c02-video-poster.jpg?v=2026-09-27', label: 'Video', alt: 'AQUARIS C02 on a physical watch with the silver sunburst dial, steel hands, date 27 and the red battery gauge needle', caption: 'AQUARIS C02 / On the watch.' }
     ],
     highlights: ['Battery gauge E to F', 'Applied square numerals', 'Chrome date window', 'Outlined always-on'],
     keyFunctions: [
@@ -168,7 +216,7 @@ window.AQUARIS_CATALOG = [
     notes: [
       'Prototype download for evaluation, not a hardware-validated daily-use release. Install and use at your own risk.',
       'C02 has no seconds hand. The sub-dial above 6 shows battery level instead.',
-      'Current validation covers six native tests: hand angles, battery-gauge angles and clamping, rotation about each hand pivot, date-cell selection, resource geometry and the active/always-on draw layers. In the simulator, the always-on view lit about 7.7% of the display. These results do not establish physical-device compatibility, battery life or burn-in safety.',
+      'Current validation covers six native tests: hand angles, battery-gauge angles and clamping, rotation about each hand pivot, date-cell selection, resource geometry and the active/always-on draw layers. In the simulator, the always-on view lit about 7.7% of the display. The gallery video shows C02 running on a physical fenix 8 AMOLED 47 mm. These results do not establish long-term battery life or burn-in safety.',
       'The dial is designed for 454 x 454 pixels. No other device-specific downloads or compatibility claims are provided.'
     ]
   }
