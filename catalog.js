@@ -232,7 +232,28 @@ window.AQUARIS_CATALOG = [
     compatibleWatches: [
       { name: 'fenix 8 AMOLED 47 mm', status: 'Prototype build target / 454 x 454' }
     ],
-    compatibilityNote: 'This prototype PRG targets fenix 8 AMOLED 47 mm only, with a fixed 454 x 454 layout. No other device profiles have been assessed for S01. Sunrise and sunset need a location from the watch\'s weather data or GPS. Drawing performance, battery consumption and AMOLED burn-in protection remain unverified.',
+    compatibilityNote: 'This prototype PRG targets fenix 8 AMOLED 47 mm only. The assessment below covers the same 15 selected device profiles as R01, not every model or case size. S01 draws its layout at fixed 454 x 454 coordinates, so only 454-pixel screens are candidates. A simulator pass is a candidate result, not a supported download or confirmation that every function works on a physical watch. Sunrise and sunset need a location from the watch\'s weather data or GPS. Drawing performance, battery consumption and AMOLED burn-in protection remain unverified.',
+    compatibilityAssessment: {
+      date: '2026-10-03',
+      method: 'SDK 9.2.0: device-specific release compilation and S01\'s 8 native automated tests in the simulator. Thirteen profiles compiled and passed all 8 tests; two were blocked by API level. The time, readings, daylight ring and curved text use fixed 454 x 454 coordinates and are not scaled, so profiles with other screen sizes are listed as blocked even where the build compiled and the tests passed. The tests check battery thresholds, missing and stale readings, time and date formats, the daylight window and location handling, pressure history and altitude, and that every active and always-on layout fits the dial, not the full rendered image, sensor availability, low-power behavior or battery use. No additional model-specific downloads are offered.',
+      results: [
+        ['fenix 9 47 mm', '454 x 454', 'Simulator pass', '8/8 tests; candidate only.'],
+        ['fenix 8 AMOLED 47 mm', '454 x 454', 'Supported download', '8/8 tests; appears on the owner\'s watch in the gallery video.'],
+        ['fenix 7 Pro', '260 x 260', 'Blocked', 'Compiled and 8/8 tests passed, but the 454-pixel layout does not fit this 260-pixel MIP screen.'],
+        ['epix (Gen 2)', '416 x 416', 'Blocked', 'Compiled and 8/8 tests passed, but the 454-pixel layout does not fit this 416-pixel screen.'],
+        ['Forerunner 970', '454 x 454', 'Simulator pass', '8/8 tests; candidate only.'],
+        ['Forerunner 965', '454 x 454', 'Simulator pass', '8/8 tests; candidate only.'],
+        ['Forerunner 955', '260 x 260', 'Blocked', 'Compiled and 8/8 tests passed, but the 454-pixel layout does not fit this 260-pixel MIP screen.'],
+        ['Venu 4 41 mm', '390 x 390', 'Blocked', 'Compiled and 8/8 tests passed, but the 454-pixel layout does not fit this 390-pixel screen.'],
+        ['Venu 3', '454 x 454', 'Simulator pass', '8/8 tests; candidate only.'],
+        ['Venu 2', '416 x 416', 'Blocked', 'Compiled and 8/8 tests passed, but the 454-pixel layout does not fit this 416-pixel screen.'],
+        ['vivoactive 6', '390 x 390', 'Blocked', 'Compiled and 8/8 tests passed, but the 454-pixel layout does not fit this 390-pixel screen.'],
+        ['vivoactive 5', '390 x 390', 'Blocked', 'Compiled and 8/8 tests passed, but the 454-pixel layout does not fit this 390-pixel screen.'],
+        ['vivoactive 4', '260 x 260', 'Blocked', 'Compilation blocked: device API is below the required version 5.0.'],
+        ['Instinct 3 AMOLED 45 mm', '390 x 390', 'Blocked', 'Compiled and 8/8 tests passed, but the 454-pixel layout does not fit this 390-pixel screen.'],
+        ['Instinct 2', '176 x 176', 'Blocked', 'Compilation blocked: device API is below the required version 5.0.']
+      ]
+    },
     resolution: '454 x 454',
     timeFormat: 'Digital, 24-hour (default) or 12-hour',
     status: 'Prototype',
