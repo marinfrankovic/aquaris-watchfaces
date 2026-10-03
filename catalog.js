@@ -219,5 +219,56 @@ window.AQUARIS_CATALOG = [
       'Current validation covers six native tests: hand angles, battery-gauge angles and clamping, rotation about each hand pivot, date-cell selection, resource geometry and the active/always-on draw layers. In the simulator, the always-on view lit about 7.7% of the display. The gallery video shows C02 running on a physical fenix 8 AMOLED 47 mm. These results do not establish long-term battery life or burn-in safety.',
       'The dial is designed for 454 x 454 pixels. No other device-specific downloads or compatibility claims are provided.'
     ]
+  },
+  {
+    id: 's01',
+    name: 'AQUARIS S01',
+    series: 'S01',
+    category: 'Digital / Hiking',
+    tagline: 'Daylight on the rim. Readings at a glance.',
+    designHeading: ['Daylight on the rim,', 'readings at a glance.'],
+    description: 'A digital hiking face on a charcoal dial. A thin 24-hour ring shows today\'s daylight in gold, with sunrise and sunset times beside a sun and a moon, and a white dot for now. Large Bahnschrift time sits above altitude, barometric pressure, outdoor temperature with weather, and heart rate. The daylight left curves along the bottom.',
+    device: 'fenix 8 AMOLED 47 mm',
+    compatibleWatches: [
+      { name: 'fenix 8 AMOLED 47 mm', status: 'Prototype build target / 454 x 454' }
+    ],
+    compatibilityNote: 'This prototype PRG targets fenix 8 AMOLED 47 mm only, with a fixed 454 x 454 layout. No other device profiles have been assessed for S01. Sunrise and sunset need a location from the watch\'s weather data or GPS. Drawing performance, battery consumption and AMOLED burn-in protection remain unverified.',
+    resolution: '454 x 454',
+    timeFormat: 'Digital, 24-hour (default) or 12-hour',
+    status: 'Prototype',
+    download: {
+      url: 'downloads/s01/2026-10-03/fenix847mm/AquarisS01.prg',
+      filename: 'AquarisS01.prg',
+      device: 'fenix 8 AMOLED 47 mm',
+      build: '2026-10-03',
+      bytes: 76572,
+      sha256: '4471e335fa302480e041de662c30ac26e68e64f2f3eb13b3568238906dbde00c'
+    },
+    images: [
+      { src: 'assets/s01-active.png?v=2026-10-03', label: 'Active', alt: 'AQUARIS S01 charcoal dial with a gold daylight ring, sunrise 07:42 beside a sun and sunset 19:17 beside a moon, time 16:57, battery 75%, altitude 1372 m, pressure 861 hPa, 17 degrees partly cloudy, heart rate 80 and DAYLIGHT 2h19m curved along the bottom', caption: 'Active / Native simulator capture with simulated readings and location.' },
+      { src: 'assets/s01-aod.png?v=2026-10-03', label: 'Always-on', alt: 'S01 always-on display with dim grey time 16:57, date and a battery outline with charge bars at 75%', caption: 'Always-on / Native simulator capture. Dim time, date and battery only.' }
+    ],
+    videos: [
+      { type: 'video', src: 'assets/s01-video.mp4?v=2026-10-03', poster: 'assets/s01-video-poster.jpg?v=2026-10-03', label: 'Video', alt: 'AQUARIS S01 on a physical watch showing the daylight ring with sunrise 07:42 and sunset 19:17, time 16:54 and DAYLIGHT 2h23m', caption: 'AQUARIS S01 / On the watch.' }
+    ],
+    highlights: ['24-hour daylight ring', 'Sunrise and sunset times', 'Altitude and barometer', 'Weather and heart rate'],
+    keyFunctions: [
+      ['Daylight ring', 'A thin ring around the dial covers 24 hours, with midnight at the bottom and noon at the top. Today\'s daylight runs from the sun to the moon in gold; the part still ahead is bright. Sunrise and sunset times sit on the ring beside their icons and move with the season and your location.'],
+      ['Daylight left', 'Curved text along the bottom shows the daylight left until sunset, such as DAYLIGHT 2h19m. Before sunrise and after sunset it shows the next sunrise time.']
+    ],
+    features: [
+      ['Location for sun times', 'Sunrise and sunset use the location in the watch\'s weather data, then an activity or last known GPS position. The face saves the last valid location and reuses it. Without any location it shows NO LOCATION.'],
+      ['Hiking readings', 'Altitude in meters with a mountain icon, local barometric pressure in hPa on a 500 to 1100 gauge, outdoor temperature in Celsius with a weather icon, and heart rate. Missing or old readings show -- instead of a guess.'],
+      ['Battery and date', 'A ten-bar battery meter with percentage turns green above 50%, yellow from 15% and red below 15%. The date format is a setting: SAT 03 OCT, SAT 03.10., 03.10.2026, SAT OCT 03 or 2026-10-03.'],
+      ['AQUARIS branding', 'The double-wave logo and AQUARIS S01 curve along the top, just inside the daylight ring.'],
+      ['Always-on view', 'Low-power mode shows dim time, date and the battery with charge bars. It shifts by up to 2 pixels each minute and blanks alternate pixel rows. In the simulator it lit about 4.2% of the display.'],
+      ['Permissions', 'S01 reads the watch\'s sensor history for altitude, pressure and heart rate, and position for sunrise and sunset. It does not use network access.']
+    ],
+    notes: [
+      'Prototype download for evaluation, not a hardware-validated daily-use release. Install and use at your own risk.',
+      'Do not use S01 for navigation or weather warnings. Pressure also falls as you climb, so a pressure change alone is not a forecast.',
+      'Current validation covers eight native tests, including battery colors, data freshness, date and time formats, sunrise and sunset selection across midnight, location checks and text clipping in every layout. The gallery video shows S01 running on a physical fenix 8 AMOLED 47 mm. These results do not establish long-term battery life or burn-in safety.',
+      'The dial is designed for 454 x 454 pixels. No other device-specific downloads or compatibility claims are provided.'
+    ]
   }
 ];
